@@ -1,0 +1,6 @@
+Agent 007 en danger salle 5
+Agent 007 en danger salle 5
+Agent 007 en danger salle 5
+oiseau → J'ai besoin d'aide
+plante → Besoin d'extraction immédiatement
+orage → Protocole d'urgence activé
