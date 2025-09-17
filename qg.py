@@ -5,21 +5,18 @@ import base64
 import hashlib
 import random
 
-# Mots de code → mot de passe
 mots_de_code = {
     "oiseau": "bleu123",
     "plante": "vert456",
     "orage": "gris789"
 }
 
-# Mots de code → message réel
 messages_reels = {
     "oiseau": "J'ai besoin d'aide",
     "plante": "Besoin d'extraction immédiatement",
     "orage": "Protocole d'urgence activé"
 }
 
-# Phrases leurres à afficher si le mot de passe est faux
 phrases_leurres = [
     "Le colis est sécurisé.",
     "Aucune activité détectée.",
@@ -69,7 +66,6 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                 with open("log.txt", "a", encoding="utf-8") as f:
                     f.write(f"{mot_code} → {message_alerte}\n")
             else:
-                # Mot de passe incorrect ou message inconnu
                 phrase_fausse = random.choice(phrases_leurres)
                 print("Mot de passe incorrect.")
                 print(f"Message leurre : {phrase_fausse}")
